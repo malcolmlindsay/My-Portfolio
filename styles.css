@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.nav-active {
+    color: #FAA11B;
+}
+
+header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+}
+
+.bg-primary {
+   background-color:#B14545;
+}
+.bg-secondary {
+    background-color: antiquewhite;
+}
+.bg-black {
+    background-color: black;
+    color: antiquewhite;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-nav {
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+ul{
+    list-style: none;
+}
+
+a.nav-link{
+    margin: 0 20px 0 20px;
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 18pt;
+    text-align: left;
+}
+a.nav-link:hover{
+    border-bottom: 1px solid antiquewhite;
+    border-radius: 5px;
+    cursor: pointer;
+}
+h1 {
+    font-size: 32pt;
+}
+li {
+    padding-left: 10px;
+    justify-items: center;
+}
+.gold-text {
+    color: #FAA11B
+}
+.green-text {
+    color: lightseagreen;
+}
+
+.introduction img {
+    width: 250px;
+    height:250px;
+    margin: 0px 50px 0;
+    border-radius: 100%;
+}
+.about-me-inner {
+    text-align: left;
+    padding: 10px;
+}
+
+h4 {
+    color:#FAA11B;
+    padding: 10px;
+}
+
+ul li img {
+    margin: 5px 20px 5px 0;
+}
+
+#profile-pic-2 {
+    border-radius: 10%;
+    margin-bottom: 20px;
+    width: 342px;
+    height: 300px;
+}
+
+#college {
+    font-size: large;
+    color: maroon;
+    font-weight: bold;
+}
+
+#images {
+    text-align: center;
+}
+
+#my-projects-link {
+    background-color: white;
+    height: 35px;
+    width: 180px;
+    font-size: 20pt;
+    font-style: bold;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 6px 10px 0 rgba(0, 0, 10, 0.3);
+}
+
+#my-projects-link a{
+    color: maroon;
+    text-decoration: none;
+}
+
+#my-projects-link a:hover{
+    color: #FAA11B;
+}
+
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+    width: 31px;
+    height: 21px;
+}
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width: 880px) {
+    .introduction img {
+        display: none;
+    }
+
+    .img-small-screen {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: none;
+        
+    }
+
+    .img-small-screen img {
+        width: 250px;
+        height:250px;
+        border-radius: 100%;
+        margin: 100px 0 0;
+    }
+
+    .main-nav-links {
+        opacity: 100%;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        position: absolute;
+        top: 3.75rem;
+        left: 100%;
+        pointer-events: none;
+        transform: translateX(200px);
+        transition: transform 1000ms;
+        width: 200px;
+    }
+    .main-nav-links.active{
+        opacity: 100%;
+        transform: translateX(-200px);
+        pointer-events: all;
+        transition: transform 500ms;
+        width: 200px;
+    }
+    .main-nav-links.active li, .main-nav-links.active li a {
+        margin: 0 25px 0 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 22pt;
+        padding-left: 10px;
+    }
+
+    .big-screen {
+        display: none;
+    }
+
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 30px;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+}
+
+
+@media screen and (min-width: 881px) {
+    .img-small-screen img {
+        display: none;
+    }
+    
+    .introduction {
+        height: 600px;
+        align-items: center;
+        justify-content: center;
+    }
+    .hello-statement {
+        margin: 0 50px 0 0;
+    }
+    .small-screen {
+        display: none;
+    }
+    #titles-grid-2-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+    .about-me{
+        padding: 20px 50px;
+        display: grid;
+        grid-template-columns: 1fr .5fr .5fr;
+    }
+}

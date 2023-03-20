@@ -1,0 +1,198 @@
+@font-face {
+    font-family: Questrial;
+    src: url('./Questrial-Regular.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Questrial;
+}
+
+nav {
+    display: flex;
+    height: 14vh;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1.5px solid firebrick;
+}
+
+nav > img {
+    width: 60px;
+    height: 75px;
+    margin: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    border-radius: 10%;
+}
+
+nav > h1 {
+    color: firebrick;
+    margin: 0;
+    text-align: center;
+    font-size: 24pt;
+}
+
+a.nav-link:hover {
+    color: firebrick;
+    font-style: bold;
+    border-bottom: 2px solid firebrick;
+}
+#current-page {
+    color: firebrick;
+    font-style: bold;
+    border-radius: 10%;
+    border-bottom: 2px solid firebrick;
+}
+
+.footer-container {
+    width: 100%;
+    text-align: center;
+    justify-items: center;
+    border-top: 2px solid firebrick;
+}
+.footer-container img {
+    width: 30px;
+    height: 40px;
+    margin: 5px;
+}
+
+.main-content-container {
+    display: flex;
+    flex-wrap: column;
+    text-align: right;
+    background-color: seashell;
+    padding: 5px;
+    margin: 2.5px;
+    border: 2px solid firebrick;
+    border-radius: 10px;
+}
+#services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+.service-item > img {
+    width: 90%;
+    height: 90%;
+    border-radius: 5%;
+}
+.services-label {
+    font-size: 20pt;
+    color: firebrick;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+.about-container {
+    background-color: seashell;
+    margin: 2.5px;
+    border-radius: 10px;
+    border: 2px solid firebrick;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.contact-container {
+    background-color: seashell;
+    border-radius: 10px;
+    margin: 2.5px;
+    padding: 5px;
+    border: 2px solid firebrick;
+}
+
+#social-medias {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-logo {
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px;
+}
+
+.social-logo:hover {
+    border: 1.5px solid firebrick;
+    background-color: firebrick;
+    border-radius: 100%;
+}
+/*** Media Queries ***/
+
+@media (min-width: 800px){
+    .toggle-button {
+        display: none;
+    }
+    .nav-selections > ul {
+        margin-right: 10px;
+    }
+    .nav-selections > ul > li{
+        font-size: 1.75em;
+        margin-right: 10px;
+        display: inline;
+    }
+}
+
+@media (max-width: 800px) {
+    .toggle-button {
+        position: absolute;
+        top: 5.0vh;
+        right: 2.5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 31px;
+        height: 21px;
+    }
+    .toggle-button .bar {
+        height: 4px;
+        width: 80%;
+        background-color: firebrick;
+        border-radius: 10px;
+    }
+    .nav-selections > ul > li{
+        display: none;
+    }
+}
+
+@media (min-width: 1080px) {
+    .main-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .main-content-container {
+        width: 50%;
+    }
+
+    .about-container {
+        width: 25%;
+    }
+
+    .contact-container {
+        width: 25%;
+    }
+}
+@media (max-width:1079px){
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+}

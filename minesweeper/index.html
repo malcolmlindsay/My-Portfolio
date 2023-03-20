@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Minesweeper</title>
+</head>
+<body>
+    <header>
+        <a href="https://malcolmjlindsay.com" id="home-link"">ML</a>
+        <h3 class="title">Minesweeper</h3>
+        <button onclick="openHelp()"> ? </button>
+        <div class="help-box">
+            <h3> How to play</h3>
+            <ul>
+                <li> Avoid the mines! </li>
+                <li> Numbers let you know the amount of adjacaent mines </li>
+                <li> Clear the board as quickly as possible.</li>
+                <li> left click to reveal, right click to flag a mine</li>
+            </ul>
+        </div>
+        </div>
+    </header>
+    <div class="subtext">
+        <span>
+            <span data-mine-count></span>
+            <img src="./assests/flag.png" alt="flag" width="20px" height="20px">
+        </span>
+        <div class="start">Start</div>
+        <div class="timer"></div>
+    </div>
+    <div class="board"></div>
+    <div class="win-lose-message">
+    </div>
+</body>
+</html>
